@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom theme definitions */
+[data-theme="dark"] {
+  --fallback-p: #e67b10;
+  --fallback-pc: #ffffff;
+  --fallback-s: #E65100;
+  --fallback-sc: #ffffff;
+  --fallback-a: #F57C00;
+  --fallback-ac: #ffffff;
+  --fallback-n: #141C2F;
+  --fallback-nc: #ffffff;
+  --fallback-b1: #0B1220;
+  --fallback-b2: #141C2F;
+  --fallback-b3: #1A2332;
+  --fallback-bc: #ffffff;
+  --fallback-in: #00b3f0;
+  --fallback-inc: #ffffff;
+  --fallback-su: #00ca92;
+  --fallback-suc: #ffffff;
+  --fallback-wa: #ffbe00;
+  --fallback-wac: #ffffff;
+  --fallback-er: #ff5861;
+  --fallback-erc: #ffffff;
+}
+
+/* Custom responsive breakpoints for better laptop support */
+@media (min-width: 1366px) and (max-width: 1920px) {
+  /* 15.6" laptop optimizations */
+  .laptop-optimize {
+    max-width: 95vw;
+  }
+}
+
+/* Smooth transitions for better UX */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* Animation improvements */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+/* Fade in up animation for auth forms */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Better mobile touch targets */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+/* Force dark theme tooltip styles for light theme */
+[data-theme="light"] .tooltip:before {
+  background-color: #676e79 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .tooltip:after {
+  border-color: #1f2937 transparent transparent transparent !important;
+}
+/* Ensure icons are visible in dark theme */
+[data-theme="dark"] .text-primary {
+  color: #e67b10 !important;
+}
+
+[data-theme="dark"] .bg-primary\/10 {
+  background-color: rgba(230, 123, 16, 0.1) !important;
+}
+/* Message bubble backgrounds for light theme */
+[data-theme="light"] .chat-bubble {
+  background-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+[data-theme="light"] .chat-end .chat-bubble {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+[data-theme="light"] .chat-start .chat-bubble {
+  background-color: #3f7cdf !important;
+  color: #ffffff !important;
+}
+[data-theme="dark"] .btn-ghost:hover {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-primary-content {
+  color: #ffffff !important;
+}   
+[data-theme="dark"] .btn-ghost:hover svg {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .hover\:bg-primary-focus:hover svg {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-primary svg {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .btn-ghost:hover {
+  background-color: #ef9d10 !important;
+}
+[data-theme="dark"] .btn-ghost:hover {
+  background-color:#ef9d10 !important;
+}
+[data-theme="dark"] .group:hover .group-hover\:text-primary {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .bg-primary {
+  border: 1px solid #ffffff !important;
+}
+[data-theme="light"] .btn-ghost:hover {
+  background-color: #3b82f6 !important;
+}
